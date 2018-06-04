@@ -1,0 +1,15 @@
+<div class="devoured">
+{{#each burger}}
+	{{#if devoured}}
+		<p>{{this.id}}.{{this.burger_name}}<button id={{id}} class="delete">X</button><button id={{id}} class="makeAnother">Create Burger.</button></p>
+	{{/if}}
+{{/each}}
+</div>
+<div class="undevoured">
+	{{#each burger}}
+		{{#unless devoured}}
+			<p>{{this.id}}.{{this.burger_name}}</p>
+			<button id={{id}} class="devour">Devour Burger.</button>
+		{{/unless}}
+	{{/each}}
+</div>
