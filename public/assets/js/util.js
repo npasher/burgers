@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   $(function(){
     $("#createBurger").on("click",function(event){
       event.preventDefault();
@@ -20,6 +19,9 @@ $(document).ready(function(){
       }
     });
     $(".devour").on("click",function(event){
+      let audioElement=document.createElement("audio");
+        audioElement.setAttribute("src","../audio/eat_short.mp3");
+      
       let id = $(this).attr("id");
       $.ajax("/api/burgers/"+id,{
         type:"PUT",
@@ -27,6 +29,7 @@ $(document).ready(function(){
         console.log("Burger Devoured.");
         location.reload();
       });
+      audioElement.play();
     });
     $(".makeAnother").on("click",function(event){
       let id=$(this).attr("id");

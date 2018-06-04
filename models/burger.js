@@ -11,16 +11,18 @@ let burger={
 			cb(res);
 		});
 	},
+
 	update:function(id,cb){
 		orm.updateOne("burgers","devoured","!devoured",id,function(res){
 			cb(res);
 		});
 	},
+
 	delete:function(id,cb){
 		orm.deleteOne("burgers",id,function(res){
 			cb(res);
 		});
 	}
 };
-// Export database functions for burgerssController.js.//
+// Export database functions for burgers_controller.js .//
 module.exports=burger;

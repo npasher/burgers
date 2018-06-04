@@ -1,7 +1,7 @@
 const express=require("express");
 const burger=require("../models/burger.js");//Import burger.js to use database functions.//
 const router=express.Router();
-//Creation of routes.//
+//Route creation.//
 router.get("/", function(req,res){
 	burger.all(function(data){
 		let burgerObj = {

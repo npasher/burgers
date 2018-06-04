@@ -1,6 +1,6 @@
 const connection=require('./connection.js');
 
-let orm = {
+let orm={
 	selectAll:function(table,cb){
 		let query="SELECT * FROM "+table;
 		connection.query(query,function(err,data){

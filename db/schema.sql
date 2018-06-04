@@ -4,7 +4,7 @@ CREATE DATABASE burgers_db;
 
 USE burgers_db;
 
-CREATE TABLE burgers (
+CREATE TABLE burgers(
   id int AUTO_INCREMENT,
   burger_name varchar(25) NOT NULL,
   devoured BOOLEAN DEFAULT false,
